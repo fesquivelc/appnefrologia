@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context=".MenuFragment" android:padding="20dp">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Bienvenido a su sistema"
+              android:textSize="25sp"
+              android:gravity="center"/>
+
+    <GridLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/gridMenu">
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:id="@+id/mnu_tests"
+                                            app:cardBackgroundColor="@color/primary_dark"
+                                            android:elevation="6dp"
+                                            android:layout_column="0"
+                                            android:layout_row="0"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="10dp"
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    tools:background="@color/primary_dark">
+
+                <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/ic_stethoscope"
+                        android:padding="10dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Resultados"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/accent"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Resultados de análisis"
+                        android:textColor="@color/primary_light"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:id="@+id/mnu_treatment"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="#0288D1"
+                                            android:layout_column="1"
+                                            android:layout_row="0"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="10dp"
+                                            android:layout_width="130dp"
+                                            android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    tools:background="@color/primary_dark">
+
+                <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/ic_medicine"
+                        android:padding="10dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tratamiento"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/accent"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Consulte su tratamiento"
+                        android:textColor="@color/primary_light"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:id="@+id/mnu_doctor"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="#0288D1"
+                                            android:layout_column="0"
+                                            android:layout_row="1"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    tools:background="#0288D1">
+
+                <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/ic_doctor"
+                        android:padding="10dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Médicos"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/accent"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Consulte nuestro personal"
+                        android:textColor="@color/primary_light"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </GridLayout>
+
+</LinearLayout>

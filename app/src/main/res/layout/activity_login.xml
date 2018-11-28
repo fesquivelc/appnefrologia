@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_main"
+            android:id="@+id/sc_main"
+            android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    tools:context="com.example.myapplication.MainActivity">
+
+        <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="49dp"
+                app:srcCompat="@drawable/ic_hospital" />
+
+        <EditText
+                android:id="@+id/input_dni"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:background="#11000000"
+                android:ems="10"
+                android:hint="DNI"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+        <EditText
+                android:id="@+id/input_password"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/input_dni"
+                android:layout_alignRight="@+id/input_dni"
+                android:layout_below="@+id/input_dni"
+                android:layout_marginTop="25dp"
+                android:background="#11000000"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textSize="16sp" />
+
+        <android.support.v7.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/design_default_color_primary"
+                app:cardCornerRadius="25dp"
+                android:layout_below="@+id/input_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:id="@+id/cardView">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/btn_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="18sp"
+                        android:text="Login" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <!--<LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+        <ImageView android:src="@drawable/logo_nephrology"
+                   android:layout_width="wrap_content"
+                   android:layout_height="140dp"
+                   android:layout_marginBottom="24dp"
+                   android:layout_gravity="center_horizontal" />
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_email"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="number"
+                      android:hint="DNI" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_password"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textPassword"
+                      android:hint="Contraseña"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@color/primary_dark"
+
+                android:text="Iniciar sesión"/>
+
+    </LinearLayout>-->
+</ScrollView>
