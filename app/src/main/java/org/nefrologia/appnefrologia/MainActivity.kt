@@ -79,8 +79,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         var fragment: Fragment? = null
         when (item.itemId) {
 
-            R.id.nav_patient -> {
-
+            R.id.nav_doctor -> {
+                fragment = DoctorListFragment.newInstance("","")
             }
             R.id.nav_medical_appointment -> {
 
@@ -91,14 +91,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             else -> {
                 fragment = MenuFragment.newInstance("", "")
             }
-//            R.id.nav_share -> {
-//
-//            }
-//            R.id.nav_send -> {
-//
-//            }
-
-
         }
 
         if (fragment != null) {

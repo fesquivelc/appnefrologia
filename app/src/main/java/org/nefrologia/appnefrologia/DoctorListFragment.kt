@@ -16,6 +16,11 @@ import org.nefrologia.appnefrologia.client.ApiService
 import org.nefrologia.appnefrologia.client.Model
 import org.nefrologia.appnefrologia.client.SessionService
 import org.nefrologia.appnefrologia.recyclerview.DoctorViewAdapter
+import org.nefrologia.appnefrologia.tools.ModelAdapter
+import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.LinearLayoutManager
+
+
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -31,14 +36,25 @@ private const val TAG_ERROR = "DoctorListFragment:ERR"
  * create an instance of this fragment.
  *
  */
-class DoctorListFragment : Fragment() {
+class DoctorListFragment : ModelAdapter.ClickListener<Model.Medico>,Fragment() {
+    override fun onClick(item: Model.Medico, position: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onChangeSelection(haveSelected: Boolean) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onCountSelection(count: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var disposable: Disposable? = null
-    private var list: MutableList<Model.Medico> by lazy {
-        
-    }
+    private var doctorList: MutableList<Model.Medico> = mutableListOf()
+    private val doctorViewAdapter = DoctorViewAdapter(doctorList,this)
     private val apiService by lazy {
         ApiService.create()
     }
@@ -63,6 +79,10 @@ class DoctorListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        view.rv_medic.adapter = doctorViewAdapter
+        view.rv_medic.layoutManager = LinearLayoutManager(context)
+        view.rv_medic.itemAnimator = DefaultItemAnimator()
+        view.rv_medic.setHasFixedSize(true)
         loadDoctorList(view)
     }
 
@@ -74,13 +94,17 @@ class DoctorListFragment : Fragment() {
                 { result ->
                     result.datos!!
                     Log.d(TAG_INFO, "Nro de datos obtenidos: ${result.datos.size}")
-
-
+                    doctorList.addAll(result.datos)
+                    doctorViewAdapter.notifyDataSetChanged()
                 },
                 { error ->
                     Log.d(TAG_ERROR, "No se pudieron obtener los datos",error)
                 }
             )
+    }
+
+    private fun reloadRecyclerView() {
+
     }
 
     companion object {

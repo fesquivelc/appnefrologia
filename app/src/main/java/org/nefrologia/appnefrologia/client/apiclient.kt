@@ -13,7 +13,8 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 
-private const val BASE_URL = "http://10.0.2.2/clinica_api/webservice/"
+//private const val BASE_URL = "http://10.0.2.2/clinica_api/webservice/"
+private const val BASE_URL = "http://192.168.1.176/clinica_api/webservice/"
 
 private const val TAG_ERROR = "ApiService:ERROR"
 private const val TAG_INFO = "ApiService:INFO"
