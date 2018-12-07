@@ -61,8 +61,8 @@ interface ApiService {
     @POST("analisisHistory_paciente.php")
     fun analisisHistory(@Body request: Model.HistoryRequest): Observable<Model.ResponseWrapper<Model.HistoryResponse>>
 
-    @GET("")
-    fun tratamientoList(request: Model.TratamientoRequest): Observable<Model.ResponseWrapper<Model.TratamientoResponse>>
+    @POST("tratamiento_paciente.php")
+    fun tratamientoList(@Body request: Model.TratamientoRequest): Observable<Model.ResponseWrapper<Model.TratamientoResponse>>
 
 
 }

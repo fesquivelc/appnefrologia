@@ -4,16 +4,19 @@
       tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+                android:title="Inicio"/>
         <item
                 android:id="@+id/nav_doctor"
                 android:icon="@drawable/ic_doctor"
                 android:title="Doctores"/>
         <item
-                android:id="@+id/nav_medical_appointment"
+
+                android:id="@+id/nav_tests"
                 android:icon="@drawable/ic_stethoscope"
                 android:title="Análisis"/>
         <item
-                android:id="@+id/nav_tests"
+                android:id="@+id/nav_treatment"
                 android:icon="@drawable/ic_medicine"
                 android:title="Tratamiento"/>
         <!--<item-->

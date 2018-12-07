@@ -110,14 +110,14 @@ object Model {
     )
 
     data class TratamientoRequest(
-        @SerializedName("fecha_inicio") var fechaInicio: Date? = null,
-        @SerializedName("fecha_fin") var fechaFin: Date? = null,
-        var param: String? = null
+        @SerializedName("paciente_id") val pacienteId: Int? = null,
+        val mes: Int,
+        val anio: Int
     )
 
     data class TratamientoResponse(
         var paciente: String? = null,
-        var fecha: Date? = null,
+        var fecha: String? = null,
         var diagnostico: String? = null,
         var trato: String? = null
     )

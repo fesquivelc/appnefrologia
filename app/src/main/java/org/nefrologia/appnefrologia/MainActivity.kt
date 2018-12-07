@@ -77,14 +77,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
-        var fragment: Fragment? = null
+        var fragment: Fragment? = MenuFragment.newInstance("", "")
         when (item.itemId) {
-
+            R.id.nav_home -> {
+                fragment = MenuFragment.newInstance("", "")
+            }
             R.id.nav_doctor -> {
                 fragment = DoctorListFragment.newInstance("","")
             }
-            R.id.nav_medical_appointment -> {
-
+            R.id.nav_treatment -> {
+                val intent = Intent(this, TreatmentActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_tests -> {
                 val intent = Intent(this, AnalisisHistoryActivity::class.java)
