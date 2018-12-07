@@ -29,6 +29,8 @@
                 android:label="@string/title_activity_treatment"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".AnalisisHistoryActivity">
+        </activity>
     </application>
 
 </manifest>

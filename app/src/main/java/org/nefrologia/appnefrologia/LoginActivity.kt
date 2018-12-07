@@ -66,5 +66,6 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         disposable?.dispose()
+        super.onDestroy()
     }
 }

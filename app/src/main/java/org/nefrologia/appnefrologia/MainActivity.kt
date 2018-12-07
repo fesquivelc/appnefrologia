@@ -1,5 +1,6 @@
 package org.nefrologia.appnefrologia
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -86,7 +87,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_tests -> {
-
+                val intent = Intent(this, AnalisisHistoryActivity::class.java)
+                startActivity(intent)
             }
             else -> {
                 fragment = MenuFragment.newInstance("", "")

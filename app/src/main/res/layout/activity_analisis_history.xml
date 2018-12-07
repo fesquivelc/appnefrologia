@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_analisis_list"
+        tools:context=".AnalisisHistoryActivity">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@color/primary"
+                      android:padding="5dp"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#fff"
+                      android:textSize="23sp"
+                      android:gravity="center"
+                      android:text="Búsqueda de tratamiento"
+            />
+            <Spinner android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/sp_month"
+                     android:entries="@array/month_entries"
+                     android:background="#fff"/>
+
+            <Spinner android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:entries="@array/year_entries"
+                     android:id="@+id/sp_year"
+                     android:background="#fff"/>
+
+            <Button
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@color/primary_dark"
+                    android:layout_gravity="end"
+                    android:padding="2dp"
+                    android:text="Realizar búsqueda"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="10dp">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HBSAG"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hbsag"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="TGO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/tgo"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="FOSFATASA"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/fosfatasa"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="TGP"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/tgp"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="CORETOTAL"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/coretotal"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="SODIO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/sodio"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HIV"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hiv"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="CLORO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/cloro"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="POTASIO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/potasio"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="FOSFORO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/fosforo"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HTO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hto"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="SATURACION"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/saturacion"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HEPATITISB"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hepatitisb"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="ALBUMINA"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/albumina"
+                          android:text="-"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="GLOBULINA"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/globulina"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="PROTEINAS"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/proteinas"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="PARATOHORMONA"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/paratohormona"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="CREATINAPRE"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/creatinapre"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="CALCIO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/calcio"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="ARCHVC"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/achvc"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="VDRL"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/vdrl"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HB"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hb"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="HIERRO SERICO"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/hierroserico"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="FERRITINA"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/ferritina"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="UREAPRE"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/ureapre"
+                          android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="UREAPOST"
+                          android:layout_marginBottom="2dp"
+                          android:textStyle="bold"
+                />
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/ureapost"
+                          android:text="-"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
